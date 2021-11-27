@@ -7,6 +7,7 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+library(knitr)
 library(tidyverse)
 ```
 
@@ -63,7 +64,7 @@ max_horses <- horse_pop %>%
   group_by(Province) %>% 
   summarize(Maximum = max(Value),
             Minimum = min(Value))
-max_horses
+knitr::kable(max_horses, caption = "Table 1. Maximum and Minimum count of horses by Province")
 ```
 
 Below we zoom in and look at the province of Alberta:
