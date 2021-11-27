@@ -82,7 +82,7 @@ province_plot <- horse_pop %>%
   geom_line() +
   xlab("Year") +
   ylab("Number of horses") +
-  ggtitle("Historical number of horses in Alberta") +
+  ggtitle(paste("Historical number of horses in", params$province)) +
   facet_grid(~GEO) +
   scale_y_continuous(labels = scales::comma) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
